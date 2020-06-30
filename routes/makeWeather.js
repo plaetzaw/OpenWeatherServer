@@ -4,8 +4,8 @@ const bodyParser = require("body-parser");
 
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.get("/login", (req, res) => {
-  res.send("login");
+router.get("/makeWeather", (req, res) => {
+  res.send("Make your weathers");
 });
 
 module.exports = router;
