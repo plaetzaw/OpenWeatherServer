@@ -1,11 +1,6 @@
 exports.up = (knex) => {
   return knex.schema.createTable("weathers", (t) => {
     t.increments("id").primary().unsigned();
-    t.integer("user_id")
-      .references("users.id")
-      .unsigned()
-      .index()
-      .onDelete("CASCADE");
     t.string("cityname");
     t.integer("temperature");
     t.integer("humidity");
