@@ -7,8 +7,11 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 router.post("/viewWeather", (req, res) => {
   let cityname = req.body.cityname;
+  console.log(cityname);
   let temperature = req.body.temperature;
+  console.log(temperature);
   let humidity = req.body.humidity;
+  console.log(humidity);
 
   db("weathers")
     .insert({
