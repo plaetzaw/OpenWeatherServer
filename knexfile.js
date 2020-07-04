@@ -3,8 +3,7 @@
 module.exports = {
   development: {
     client: "pg",
-    connection:
-      "postgres://byharild:A7-B8NWTBoOxhf5gRRqUEejMe2XeVd5K@ruby.db.elephantsql.com:5432/byharild",
+    connection: process.env.DB_HOST,
     migrations: {
       tableName: "knex_migrations",
       directory: `${__dirname}/db/migrations`,
