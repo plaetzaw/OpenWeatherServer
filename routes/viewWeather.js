@@ -12,12 +12,15 @@ router.post("/viewWeather", (req, res) => {
   console.log(temperature);
   let humidity = req.body.humidity;
   console.log(humidity);
+  let date = req.body.date;
+  console.log(date);
 
   db("weathers")
     .insert({
       cityname: cityname,
       temperature: temperature,
       humidity: humidity,
+      date: date,
     })
     .then(() => {
       res.status(200).json({ message: "weather submitted" });

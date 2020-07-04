@@ -4,6 +4,7 @@ exports.up = (knex) => {
     t.string("cityname");
     t.integer("temperature");
     t.integer("humidity");
+    t.string("date");
     t.timestamp("created_at").defaultTo(knex.fn.now());
     t.timestamp("updated_at").defaultTo(knex.fn.now());
   });
