@@ -24,16 +24,16 @@ router.post("/viewWeather", (req, res) => {
     })
     .catch((err) => console.error(err));
 });
-
-router.delete("/viewWeather", (req, res) => {
-  let id = req.body.id;
-  db("weathers")
-    .whereExists({ id: id })
-    .del()
-    .then(() => {
-      res.status(200).json({ message: "weather instance deleted" });
-    })
-    .catch((err) => console.error(err));
-});
+// router.post("/deleteWeather", (req, res) => {
+//   let id = req.body.id;
+//   db("weathers")
+//     // .select(id)
+//     .where({ id: id })
+//     .del()
+//     .then(() => {
+//       res.status(200).json({ message: "weather instance deleted" });
+//     })
+//     .catch((err) => console.error(err));
+// });
 
 module.exports = router;
